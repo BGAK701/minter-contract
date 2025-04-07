@@ -1,23 +1,23 @@
-# Jetton Deployer - Contracts
+# BGAK Deployer - Contracts
 
-> Starter template for a [Jetton](https://github.com/ton-blockchain/TIPs/issues/74) project
+> Starter template for a [BGAK](https://github.com/ton-blockchain/TIPs/issues/74) project
 
-This project contains everything you need to deploy a new token (Jetton contract) to TON blockchain. This project is free and open source and was created for educational purposes.
+This project contains everything you need to deploy a new token (BGAK contract) to TON blockchain. This project is free and open source and was created for educational purposes.
 
 &nbsp;
-## Option 1: Deploy a standard Jetton using your browser
+## Option 1: Deploy a standard BGAK using your browser
 
-This is by far the simpler option if you want to use the standard Jetton code. You will not need to install any tools on your machine, just open up your web browser, fill-in some data about your token in the HTML form and click deploy.
+This is by far the simpler option if you want to use the standard BGAK code. You will not need to install any tools on your machine, just open up your web browser, fill-in some data about your token in the HTML form and click deploy.
 
 #### Instructions:
 
 1. Make sure you have a TON wallet with at least 0.25 TON balance. Supported wallets include [TonHub](https://ton.app/wallets/tonhub-wallet) and [Chrome Extension](https://ton.app/wallets/chrome-plugin).
 
-2. Use your web browser to open the site of the deploy form: https://jetton.live
+2. Use your web browser to open the site of the deploy form: https://BGAK.live
 
-    > Safety Notice: The form is [open source](https://github.com/ton-defi-org/jetton-deployer-webclient) and served from [GitHub Pages](https://ton-defi-org.github.io/jetton-deployer-webclient)
+    > Safety Notice: The form is [open source](https://github.com/ton-defi-org/BGAK-deployer-webclient) and served from [GitHub Pages](https://ton-defi-org.github.io/BGAK-deployer-webclient)
 
-3. Fill in the information about your Jetton in the form - choose a name, ticker and image.
+3. Fill in the information about your BGAK in the form - choose a name, ticker and image.
 
 4. Click the "Connect Wallet" button to connect your wallet.
 
@@ -26,9 +26,9 @@ This is by far the simpler option if you want to use the standard Jetton code. Y
 6. Once the token is deployed, the deploying wallet will receive all the tokens that were minted.
 
 &nbsp;
-## Option 2: Edit the Jetton code to add a custom token behavior
+## Option 2: Edit the BGAK code to add a custom token behavior
 
-This is much more complicated and will allow you to change the actual behavior of the Jetton to any custom behavior you want to program with the [FunC](https://ton.org/docs/#/func) language. For example, let's say you want a special Jetton that pays a 1% fee to some address every time it's transferred between users. Since this behavior is different from the standard, for this option you will need to install the FunC compiler on your machine.
+This is much more complicated and will allow you to change the actual behavior of the BGAK to any custom behavior you want to program with the [FunC](https://ton.org/docs/#/func) language. For example, let's say you want a special BGAK that pays a 1% fee to some address every time it's transferred between users. Since this behavior is different from the standard, for this option you will need to install the FunC compiler on your machine.
 
 > Note: This project is based on the [tonstarter-contracts](https://github.com/ton-defi-org/tonstarter-contracts) repo, consult it if you need more help.
 
@@ -48,18 +48,18 @@ This is much more complicated and will allow you to change the actual behavior o
 
 7. Once your tests are ready, run them by running in the root repo dir `npm run test`
 
-8. Edit your token metadata (like name and ticker) in `jettonParams` in `build/jetton-minter.deploy.ts`
+8. Edit your token metadata (like name and ticker) in `BGAKParams` in `build/BGAK-minter.deploy.ts`
 
 9. Prepare at least 0.25 TON for deployment fees.
 
 10. To deploy the token, run in the root repo dir `npm run deploy` and follow the on-screen instructions.
 
 &nbsp;
-## Jetton metadata field best practices
+## BGAK metadata field best practices
 
-* **Jetton Name** - For example: `Bitcoin Cash`<br>Usually 1-3 words, unabbreviated project name with spaces with each word capitalized. Our running example will be the [bitcoincash.org](https://bitcoincash.org) project which is a fork of the Bitcoin token.
+* **BGAK Name** - For example: `Bitcoin Cash`<br>Usually 1-3 words, unabbreviated project name with spaces with each word capitalized. Our running example will be the [bitcoincash.org](https://bitcoincash.org) project which is a fork of the Bitcoin token.
 
-* **Jetton Symbol** - For example: `BCH`<br>Usually 3-5 uppercase characters, the currency symbol for the token. This would usually appear next to the amount when the token balance is [displayed](https://img.gadgethacks.com/img/12/13/63649303499825/0/bitcoin-cash-is-now-available-coinbase.w1456.jpg). This would also appear in exchanges where the token is listed as the [ticker](https://www.coingecko.com/en/coins/bitcoin-cash).
+* **BGAK Symbol** - For example: `BCH`<br>Usually 3-5 uppercase characters, the currency symbol for the token. This would usually appear next to the amount when the token balance is [displayed](https://img.gadgethacks.com/img/12/13/63649303499825/0/bitcoin-cash-is-now-available-coinbase.w1456.jpg). This would also appear in exchanges where the token is listed as the [ticker](https://www.coingecko.com/en/coins/bitcoin-cash).
 
 * **Decimals** - For example: `9`<br>The decimal precision of your token (9 is TON default). Blockchains store floating point numbers (like 1.2345) as integers with a given precision. Under 9 decimals precision the balance 1.2345 BCH will be encoded as 1234500000 and the smallest balance possible to encode is 0.000000001 BCH which is encoded as 1. The balance 1 BCH is encoded as 1000000000.
 
@@ -67,7 +67,7 @@ This is much more complicated and will allow you to change the actual behavior o
 
 * **Description** - For example: `Low fee peer-to-peer electronic cash alternative to Bitcoin`<br>Optional freeform sentence explaining about your project. This can be left empty. Its purpose is to give a little more background detail about the project beyond the name. Don't make this part too long (longer than one sentence) because it's stored on-chain and can get costly.
 
-* **Jetton Logo URI** - For example: `https://bitcoincash-example.github.io/website/logo.png`<br>URL of 256x256 pixel PNG image of the token logo with transparent background. Notice that this logo is not immutable (unlike the rest of the fields) and can be changed in the future of the project as its update poses no security risks to users. It should be placed on hosting where multiple maintainers can be given easy access, which makes GitHub Pages a good solution since it can support multiple community contributors and PRs. The best practice would be this:
+* **BGAK Logo URI** - For example: `https://bitcoincash-example.github.io/website/logo.png`<br>URL of 256x256 pixel PNG image of the token logo with transparent background. Notice that this logo is not immutable (unlike the rest of the fields) and can be changed in the future of the project as its update poses no security risks to users. It should be placed on hosting where multiple maintainers can be given easy access, which makes GitHub Pages a good solution since it can support multiple community contributors and PRs. The best practice would be this:
 
     1. Create a new free GitHub organization for your project, you can follow the instructions [here](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch). In our example we created the organization `bitcoincash-example` which you can see [here](https://github.com/bitcoincash-example).
     
@@ -79,7 +79,7 @@ This is much more complicated and will allow you to change the actual behavior o
     
     5. If you have a custom domain, your image URL should be `https://bitcoincash.org/logo.png` instead of the `github.io` one. This will remove any future dependency on GitHub and allow you to switch hosting in the future which is a good option to keep.
 
-* **Where is this metadata stored?** - [The Jetton standard](https://github.com/ton-blockchain/TIPs/issues/64) supports storing metadata either on-chain or in an off-chain URL (a JSON file hosted somewhere). It is our belief that the best practice is storing metadata on-chain. Why? Let's explore the alternatives:
+* **Where is this metadata stored?** - [The BGAK standard](https://github.com/ton-blockchain/TIPs/issues/64) supports storing metadata either on-chain or in an off-chain URL (a JSON file hosted somewhere). It is our belief that the best practice is storing metadata on-chain. Why? Let's explore the alternatives:
 
   * *On-chain* - On-chain data is immutable, users can be guaranteed that important fields like the symbol will not change without their consent. On-chain data is also guaranteed to always be available. This deployer always stores metadata on-chain.
   
@@ -87,22 +87,22 @@ This is much more complicated and will allow you to change the actual behavior o
   
   * *Off-chain website* (`https://` URL) - This is by far the worst option. The owner of the website could change the metadata without user consent (not necessarily on purpose if the website is hacked). The website can also be taken down and the metadata will disappear. Users should never invest money in tokens that have their metadata stored this way.
  
-  What about the Jetton Logo URI, if it's stored on a website, can't it change? Yes, it can change and this is a feature. We believe that logos can go through rebranding without putting users at risk. Satoshi Nakamoto didn't design the current logo of Bitcoin when he wrote the initial code.
+  What about the BGAK Logo URI, if it's stored on a website, can't it change? Yes, it can change and this is a feature. We believe that logos can go through rebranding without putting users at risk. Satoshi Nakamoto didn't design the current logo of Bitcoin when he wrote the initial code.
 
-  I don't see the metadata in a wallet or block explorer, why? Some tools don't support yet the secure on-chain metadata standard. Please open issues with these tools to fix and display on-chain metadata which is supported by the official standard and is the secure way to publish Jettons.
+  I don't see the metadata in a wallet or block explorer, why? Some tools don't support yet the secure on-chain metadata standard. Please open issues with these tools to fix and display on-chain metadata which is supported by the official standard and is the secure way to publish BGAKs.
 
 &nbsp;
 ## Protect yourself and your users
 
-Don't forget that we're dealing with programmable money here. Jettons are tradable and users may end up paying real money for them. It is our responsibility as a community to keep everybody safe.
+Don't forget that we're dealing with programmable money here. BGAKs are tradable and users may end up paying real money for them. It is our responsibility as a community to keep everybody safe.
 
 1. **Never deploy smart contract code that you are unable to review**
 
-    Make sure you understand what you deploy. We went into a lot of effort to make sure everything is open source. The smart contract code that is deployed is available in this repo, you should review it and see that it's compatible with the [official standard version](https://github.com/ton-blockchain/token-contract/tree/main/ft). The HTML form that performs the deployment is [open source](https://github.com/ton-defi-org/jetton-deployer-webclient) as well and served from [GitHub Pages](https://ton-defi-org.github.io/jetton-deployer-webclient) so you can have confidence the source you see is what actually being served. By deploying your Jetton, you are taking full responsibility over what you deploy. This repo is aimed for educational purposes only and provides no guarantees.
+    Make sure you understand what you deploy. We went into a lot of effort to make sure everything is open source. The smart contract code that is deployed is available in this repo, you should review it and see that it's compatible with the [official standard version](https://github.com/ton-blockchain/token-contract/tree/main/ft). The HTML form that performs the deployment is [open source](https://github.com/ton-defi-org/BGAK-deployer-webclient) as well and served from [GitHub Pages](https://ton-defi-org.github.io/BGAK-deployer-webclient) so you can have confidence the source you see is what actually being served. By deploying your BGAK, you are taking full responsibility over what you deploy. This repo is aimed for educational purposes only and provides no guarantees.
     
- 2. **Revoke admin role in the Jetton as soon as possible**
+ 2. **Revoke admin role in the BGAK as soon as possible**
 
-    The Jetton code allows a special admin role (the deployer wallet address) to mint new tokens for themselves and change token metadata. This functionality is necessary for the initial launch because that's how new Jettons enter circulation. Once you're finished with minting you must revoke your admin permissions by changing the admin to an empty address. A blockchain ecosystem is designed to be trustless. You should never take responsibility for your users' funds, you don't want a misplaced key on your behalf to permit theft from other people! Revoking the admin role will guarantee that nobody will ever be able to mint new tokens in the future and crush your Jetton price. Please only revoke after you finished doing QA and made sure all the metadata fields are correct! After revoking admin you will not be able to change any of the metadata fields anymore.
+    The BGAK code allows a special admin role (the deployer wallet address) to mint new tokens for themselves and change token metadata. This functionality is necessary for the initial launch because that's how new BGAKs enter circulation. Once you're finished with minting you must revoke your admin permissions by changing the admin to an empty address. A blockchain ecosystem is designed to be trustless. You should never take responsibility for your users' funds, you don't want a misplaced key on your behalf to permit theft from other people! Revoking the admin role will guarantee that nobody will ever be able to mint new tokens in the future and crush your BGAK price. Please only revoke after you finished doing QA and made sure all the metadata fields are correct! After revoking admin you will not be able to change any of the metadata fields anymore.
 
 ## Q&A: Is this contract deployer safe?
 
@@ -114,19 +114,19 @@ Yes! Contract deployers that look like this are the safest you can get. This is 
 
 2. *Do you have access to my token? Will you be able to mint my tokens to yourself and sell them?*
 
-    No. This deployer uses the [standard Jetton code](https://github.com/ton-blockchain/token-contract/tree/main/ft) published by TON foundation. The standard code has only one special admin address that can mint tokens. This admin address is your deployer wallet address (your wallet that pays the deploy fees).
+    No. This deployer uses the [standard BGAK code](https://github.com/ton-blockchain/token-contract/tree/main/ft) published by TON foundation. The standard code has only one special admin address that can mint tokens. This admin address is your deployer wallet address (your wallet that pays the deploy fees).
     
-3. *How can I check that you're actually using the standard Jetton smart contract code in this deployer?*
+3. *How can I check that you're actually using the standard BGAK smart contract code in this deployer?*
 
-    This deployer is open source so you can compare the code yourself. The standard Jetton code is [here](https://github.com/ton-blockchain/token-contract/tree/main/ft) - notice the TON blockchain repo. The code in this deployer is [here](https://github.com/ton-defi-org/jetton-deployer-contracts/tree/main/contracts).
+    This deployer is open source so you can compare the code yourself. The standard BGAK code is [here](https://github.com/ton-blockchain/token-contract/tree/main/ft) - notice the TON blockchain repo. The code in this deployer is [here](https://github.com/ton-defi-org/BGAK-deployer-contracts/tree/main/contracts).
     
 4. *I'm using the HTML form to deploy from my browser, how can I be sure it's deploying the contract source code in the repo?*
 
-    The HTML form is also open source, you can see the compiled smart contract bytecode that it is deploying [here](https://github.com/ton-defi-org/jetton-deployer-webclient/tree/main/src/lib/contracts). You can build the FunC source code by yourself by cloning the [contract repo](https://github.com/ton-defi-org/jetton-deployer-contracts) and building it by running `npm install` and then `npm run build`. Then compare the build output in the `/build` directory.
+    The HTML form is also open source, you can see the compiled smart contract bytecode that it is deploying [here](https://github.com/ton-defi-org/BGAK-deployer-webclient/tree/main/src/lib/contracts). You can build the FunC source code by yourself by cloning the [contract repo](https://github.com/ton-defi-org/BGAK-deployer-contracts) and building it by running `npm install` and then `npm run build`. Then compare the build output in the `/build` directory.
     
 5. *How can I be sure that the website I visit in my browser is actually serving the HTML source code in the repo?*
 
-    If you use the website to deploy, notice that the website is served by GitHub Pages - a cool service by GitHub that allows to serve websites directly from open source repos. The GitHub Actions that build the website are [here](https://github.com/ton-defi-org/jetton-deployer-webclient/tree/main/.github/workflows) and you can see that the repo name leads to the custom domain - https://ton-defi-org.github.io/jetton-deployer-webclient
+    If you use the website to deploy, notice that the website is served by GitHub Pages - a cool service by GitHub that allows to serve websites directly from open source repos. The GitHub Actions that build the website are [here](https://github.com/ton-defi-org/BGAK-deployer-webclient/tree/main/.github/workflows) and you can see that the repo name leads to the custom domain - https://ton-defi-org.github.io/BGAK-deployer-webclient
     
 6. *Does this deployer use any hidden backend servers that I don't have access to and the community can't audit?*
 
@@ -143,25 +143,25 @@ Yes! Contract deployers that look like this are the safest you can get. This is 
 &nbsp;
 ## Troubleshooting
 
-1. *I didn't write down my new Jetton's contract address and forgot what it was!*
+1. *I didn't write down my new BGAK's contract address and forgot what it was!*
 
-    Don't worry, we can find your Jetton in a block explorer like tonscan.org. Open https://tonscan.org and go to the address page of the wallet you used to deploy the Jetton (this is the wallet that paid the 0.25 TON deploy fees). We assume that you minted some tokens to this address. In the explorer UI click on the tab named "JETTONS". This will now show you all the Jettons you hold, your new Jetton should be in the list. If you didn't mint any tokens, then just throw this Jetton away and deploy a new one.
+    Don't worry, we can find your BGAK in a block explorer like tonscan.org. Open https://tonscan.org and go to the address page of the wallet you used to deploy the BGAK (this is the wallet that paid the 0.25 TON deploy fees). We assume that you minted some tokens to this address. In the explorer UI click on the tab named "BGAKS". This will now show you all the BGAKs you hold, your new BGAK should be in the list. If you didn't mint any tokens, then just throw this BGAK away and deploy a new one.
 
 2. *I made a mistake with the metadata! I want to change one of the fields*
 
-    You can only change metadata fields until you revoke the admin role. If you didn't revoke the admin yet, open the minter UI and search for your Jetton by address. Once found, connect the wallet that you deployed with. You should have the ability to edit metadata fields in the UI. If you revoked the admin and must change one of the metadata fields due to a mistake, your best course of action is to throw this Jetton away and deploy a new one.
+    You can only change metadata fields until you revoke the admin role. If you didn't revoke the admin yet, open the minter UI and search for your BGAK by address. Once found, connect the wallet that you deployed with. You should have the ability to edit metadata fields in the UI. If you revoked the admin and must change one of the metadata fields due to a mistake, your best course of action is to throw this BGAK away and deploy a new one.
     
-3. *Can there be multiple Jettons with the same metadata fields like name, logo and symbol?*
+3. *Can there be multiple BGAKs with the same metadata fields like name, logo and symbol?*
 
-    Yes! Anyone can deploy as many duplicate Jettons as they want with similar metadata. Every Jetton will be deployed on a different address. Jettons are not unique and are very easy to fake. To make sure you're working with the correct Jetton, always compare the address to the official address. If you deployed a Jetton and made a mistake that cannot be recovered, you can always deploy a new one and forget about the old.
+    Yes! Anyone can deploy as many duplicate BGAKs as they want with similar metadata. Every BGAK will be deployed on a different address. BGAKs are not unique and are very easy to fake. To make sure you're working with the correct BGAK, always compare the address to the official address. If you deployed a BGAK and made a mistake that cannot be recovered, you can always deploy a new one and forget about the old.
 
-4. *I don't see my Jetton's image, it doesn't show!*
+4. *I don't see my BGAK's image, it doesn't show!*
 
-    Your Jetton's logo URI is probably invalid. To make sure the URI is working, paste it in your browser. Make sure the URI is not a web page but the URI of the image directly. The URI should end with a .PNG or .JPG extension. If this is not the case, open the website in your browser, right click on the image and select "Copy Image Address". You should now have the correct URI in your clipboard.
+    Your BGAK's logo URI is probably invalid. To make sure the URI is working, paste it in your browser. Make sure the URI is not a web page but the URI of the image directly. The URI should end with a .PNG or .JPG extension. If this is not the case, open the website in your browser, right click on the image and select "Copy Image Address". You should now have the correct URI in your clipboard.
 
-5. *My Jetton displays in some wallets/explorers but not in others*
+5. *My BGAK displays in some wallets/explorers but not in others*
 
-    Some wallets and some explorers don't support the latest standard of Jettons that store metadata securely on-chain. Wallets like TonKeeper and TonHub should be ok and explorers like tonscan.org should be ok. If your Jettons works well in these but doesn't show up in a different wallet/explorer, please open an issue for this developer and ask them to add support for Jettons storing metadata on-chain (this is part of the official standard).
+    Some wallets and some explorers don't support the latest standard of BGAKs that store metadata securely on-chain. Wallets like TonKeeper and TonHub should be ok and explorers like tonscan.org should be ok. If your BGAKs works well in these but doesn't show up in a different wallet/explorer, please open an issue for this developer and ask them to add support for BGAKs storing metadata on-chain (this is part of the official standard).
 
 6. *I have a different problem and I don't know what to do*
 
